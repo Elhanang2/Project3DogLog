@@ -3,7 +3,7 @@ const db = require('../models')
 const router = express.Router();
 const seeder = require('../test_data/seeder');
 const volController = require('../controllers/volController');
-const authController = require('../controllers/authController');
+// const authController = require('../controllers/authController');
 const passport = require('../passport');
 
 router.get('/Login', volController.Login);
@@ -13,11 +13,11 @@ router.post('/Login', passport.authenticate('local'), function(req, res) {
 });
 
 
-router.get('/Signup', volController.Signup);
+// router.get('/Signup', volController.Signup);
 
-router.post('/Signup', volController.Signup);
+// router.post('/Signup', volController.Signup);
 
-router.get('/Logout', authController.Logout);
+// router.get('/Logout', authController.Logout);
 
 
 router.get("/getData", (req, res) => {
