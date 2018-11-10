@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node api.js"
+    "start": "node api.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -31,5 +32,8 @@
     "sha256": "^0.2.0",
     "unique-names-generator": "^1.0.14",
     "validator": "^10.8.0"
-  }
+  },
+  "engines": {
+    "node": "8.11.1"
+}
 }
